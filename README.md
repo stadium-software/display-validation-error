@@ -1,5 +1,7 @@
 # Display Custom Validation Messages
 
+This repo applies to Stadium versions prior to 6.12. For Stadium 6.12+, please use the built-in validations and [this cheatsheet](https://github.com/stadium-software/validations-cheatsheet)
+
 The Stadium built-in validations only handle a small set of the most common validations. So, sometimes we need to add our own custom validations to the "Save" Button.Click event handler to ensure that the data provided by users conforms to the requirements. 
 
 When we add such custom validations, we cannot display our error message under the field and usually use a *Notification* action to inform the user. We are also not able to style the failed field as per a failed built-in validation. 
@@ -29,7 +31,7 @@ This module requires the creation of two Global Scripts. One to display validati
    2. message
    3. scrolltoclass
 3. Drag a *JavaScript* action into the script
-4. Add the Javascript below into the JavaScript code property
+4. Add the Javascript below unchanged into the JavaScript code property
 ```javascript
 /* Stadium Script v1.0 https://github.com/stadium-software/display-validation-error */
 let errMessage = ~.Parameters.Input.message;
@@ -61,7 +63,7 @@ if (el) {
 1. Create a Global Script called "ClearValidationErrors"
 2. Add the input parameters below to the Global Script
 3. Drag a *JavaScript* action into the script
-4. Add the Javascript below into the JavaScript code property
+4. Add the Javascript below unchanged into the JavaScript code property
 ```javascript
 /* Stadium Script v1.0 https://github.com/stadium-software/display-validation-error */
 let allVals = document.querySelectorAll(".has-validation-error.custom-validation");
